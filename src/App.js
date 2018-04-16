@@ -1,33 +1,29 @@
 import React, { Component } from 'react';
-import Keyboard from './Keyboard'
+import KeyboardContainer from './containers/KeyboardContainer'
+
 
 class App extends Component {
   constructor() {
     super()
       this.state = {
-        connected: false
+        audioCtx: '',
+        gain: ''
       }
   }
 
   
   componentDidMount() {
-    this.audioCtx = new AudioContext()
-    this.gain = this.audioCtx.createGain()
-    this.sine = this.audioCtx.createOscillator()
-    this.gain.connect(this.audioCtx.destination)
-    this.sine.start()
+    const audioCtx = new AudioContext()
+    const gain = audioCtx.createGain()
+    gain.connect(audioCtx.destination)
+    this.setState({ audioCtx, gain })
   }
   
-  toggleSineConnect = () => {
-    this.state.connected ? this.sine.disconnect(this.gain) : this.sine.connect(this.gain)
-    this.setState({ connected: !this.state.connected})
-  }
   
   render() {
     return (
       <div className="App">
-        <button onClick={this.toggleSineConnect}>Click For Sound</button>
-        <Keyboard />
+        <KeyboardContainer {...this.state}/>
       </div>
     );
   }

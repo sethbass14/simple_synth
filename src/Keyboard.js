@@ -1,6 +1,7 @@
 import React from 'react';
 import Key from './Key';
 
+
 //black keys add 46 px from white key
 //white keys add 66 pm from white key
 const keyDataOctave3 = [
@@ -21,7 +22,7 @@ const keyDataOctave3 = [
 
 
 const Keyboard = props => {
-  const keys = keyDataOctave3.map((keyData, index) => <Key id={keyData.pitch} display={keyData.pitch} className={keyData.className} style={keyData.style} keypad={keyData.keypad} />)
+  const keys = keyDataOctave3.map((keyData, index) => <Key id={keyData.pitch} key={index} display={keyData.pitch} className={keyData.className} style={keyData.style} keypad={keyData.keypad} />)
   return (
     <div>
       <ul className='keyboard-container'>
