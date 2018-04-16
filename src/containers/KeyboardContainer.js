@@ -17,6 +17,7 @@ class KeyboardContainer extends React.Component {
     if (pitchPairs[key]) {
       if (!this.state.activeOsc[key]) {
         const osc = this.props.audioCtx.createOscillator()
+        osc.type="square"
         osc.frequency.value = pitchPairs[key]
         osc.connect(this.props.gain)
         osc.start()
