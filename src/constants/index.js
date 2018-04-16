@@ -1,6 +1,6 @@
 
 
-export const keyDataOctave3 = [
+export const keyDataOctave4 = [
   {pitch: 'C4', className: 'white-key', style: {left: 0}, keypad: 'A'  },
   {pitch: 'C#4', className: 'black-key', style: {left: 46}, keypad: 'W'  },
   {pitch: 'D4', className: 'white-key', style: {left: 66}, keypad: 'S'  },

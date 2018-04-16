@@ -1,5 +1,5 @@
 import React from 'react';
-import Keyboard from '../Keyboard'
+import Keyboard from '../components/Keyboard'
 import { pitchPairs } from '../constants'
 
 class KeyboardContainer extends React.Component {
