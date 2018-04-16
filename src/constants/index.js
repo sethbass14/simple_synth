@@ -13,7 +13,11 @@ export const keyDataOctave4 = [
   {pitch: 'A4', className: 'white-key', style: {left: 328}, keypad: 'H'  },
   {pitch: 'A#4', className: 'black-key', style: {left: 374}, keypad: 'U'  },
   {pitch: 'B4', className: 'white-key', style: {left: 394 }, keypad: 'J'  },
-  {pitch: 'C4', className: 'white-key', style: {left: 460 }, keypad: 'K'  },  
+  {pitch: 'C4', className: 'white-key', style: {left: 460 }, keypad: 'K'  },
+  {pitch: 'C#4', className: 'black-key', style: {left: 506}, keypad: 'O'  },
+  {pitch: 'D4', className: 'white-key', style: {left: 526}, keypad: 'L'  },
+  {pitch: 'D#4', className: 'black-key', style: {left: 572}, keypad: 'P'  },
+  {pitch: 'E4', className: 'white-key', style: {left: 592}, keypad: ';'  },
 ]
 
 export const pitchPairs = {
@@ -29,5 +33,9 @@ export const pitchPairs = {
   h: 440,
   u: 466,
   j: 494,
-  k: 523
+  k: 523,
+  o: 554,
+  l: 587,
+  p: 622,
+  '\;': 659
 }

@@ -11,15 +11,14 @@ class App extends Component {
       }
   }
 
-  
   componentDidMount() {
     const audioCtx = new AudioContext()
     const gain = audioCtx.createGain()
     gain.connect(audioCtx.destination)
     this.setState({ audioCtx, gain })
   }
-  
-  
+
+
   render() {
     return (
       <div className="App">
